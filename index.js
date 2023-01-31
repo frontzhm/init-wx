@@ -143,7 +143,7 @@ function wxAgentConfig({
  *  @执行后的页面 https://blog-huahua.oss-cn-beijing.aliyuncs.com/blog/code/news_wx.png
  *
  * */
-export function w_sendChatMessage_news({
+function w_sendChatMessage_news({
   link,
   title,
   desc,
