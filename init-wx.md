@@ -1,4 +1,10 @@
-# wx-api
+---
+title: 使用微信接口再也不用config/ready巴拉巴拉了！
+tags: js
+categories: js
+theme: vue-pro
+highlight:
+---
 
 每次使用微信(包括企微)相关接口，就觉得需要重新写一遍`config`、`ready`，巴拉巴拉，烦的嘞。
 
