@@ -165,7 +165,7 @@ function w_sendChatMessage_news({
  * @param {*} url js的链接
  * @returns `promise` 加载成功会调用resolve
  */
-function loadScript(url = 'https://res.wx.qq.com/open/js/jweixin-1.2.0.js') {
+function loadScript(url = '//res.wx.qq.com/wwopen/js/jsapi/jweixin-1.0.0.js') {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.type = 'text/javascript';
@@ -192,7 +192,7 @@ function loadScript(url = 'https://res.wx.qq.com/open/js/jweixin-1.2.0.js') {
 /**
  * 初始化微信：动态加载微信脚本，自动化config/ready/error步骤
  * @param {*} { appId, timestamp, nonceStr, signature,  jsApiList = [],debug=true,beta=true} 
- * @param {*} jsScript默认是https://res.wx.qq.com/open/js/jweixin-1.2.0.js
+ * @param {*} jsScript默认是//res.wx.qq.com/wwopen/js/jsapi/jweixin-1.0.0.js
  * @returns
  * @notes 
  * 1. jsApiList不能为空数组，不然会报错
@@ -212,7 +212,7 @@ async function initWx({
   debug = true,
   beta = true,
   jsApiList = ['agentConfig'],
-}, jsScript = 'https://res.wx.qq.com/open/js/jweixin-1.2.0.js') {
+}, jsScript = '//res.wx.qq.com/wwopen/js/jsapi/jweixin-1.0.0.js') {
   if (!isWx) {
     return;
   }
