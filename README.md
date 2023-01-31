@@ -14,7 +14,7 @@ npm install wx-api
 项目里使用
 
 ```js
-import { initWx } from 'wx-api';
+import { initWx } from 'init-wx';
 
 const fn = async()=>{
   // await api() 从后端接口拿到appId, timestamp, nonceStr, signature
