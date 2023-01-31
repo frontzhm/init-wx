@@ -165,7 +165,7 @@ export function w_sendChatMessage_news({
  * @param {*} url js的链接
  * @returns `promise` 加载成功会调用resolve
  */
-export function loadScript(url = 'https://res.wx.qq.com/open/js/jweixin-1.2.0.js') {
+function loadScript(url = 'https://res.wx.qq.com/open/js/jweixin-1.2.0.js') {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.type = 'text/javascript';
