@@ -1,6 +1,7 @@
 {
   "name": "init-wx",
-  "version": "1.0.6",
+  "repository": "https://github.com/frontzhm/init-wx",
+  "version": "1.0.7",
   "main": "index.js",
   "author": "zhm <frontzhm@163.com>",
   "license": "MIT"
