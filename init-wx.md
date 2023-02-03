@@ -26,8 +26,8 @@ const fn = async()=>{
   // await api() 从后端接口拿到appId, timestamp, nonceStr, signature
   await initWx({appId, timestamp, nonceStr, signature,  jsApiList = ['onMenuShareAppMessage']})
   // ...
+  wx.onMenuShareAppMessage(/*...*/)
 }
-wx.onMenuShareAppMessage(/*...*/)
 
 ```
 

@@ -8,7 +8,7 @@ const isWx = navigator.userAgent.toLowerCase().includes('micromessenger');
  */
 function useWxInvokeApi(method, params) {
   return new Promise((resolve, reject) => {
-    wx.invoke(method, params, (res) => {
+    isWx && wx.invoke(method, params, (res) => {
       const isOk = res.err_msg === `${method}:ok`;
       isOk ? resolve(res) : reject(res);
     });
@@ -22,7 +22,7 @@ function useWxInvokeApi(method, params) {
  */
 function useWxApi(method, params) {
   return new Promise((resolve, reject) => {
-    wx[method]({
+    isWx && wx[method]({
       ...params,
       success: (res) => {
         resolve(res);
@@ -108,6 +108,11 @@ function wxAgentConfig({
   if (!corpid || !agentid) {
     throw new Error('缺少参数corpid或agentid');
   }
+  if (!isWx) {
+    console.log('不在微信环境里')
+    return;
+  }
+
   return new Promise((resolve, reject) => {
     // agentConfig注入的是应用的身份与权限
     const params = {
